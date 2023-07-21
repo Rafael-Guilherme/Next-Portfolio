@@ -31,4 +31,13 @@ body {
   background-size: 2em 2em;
   background-color: #000000;
   opacity: 1;
-} 
+}
+
+.card-tech {
+  box-shadow: 0px 5px 10px 0px rgba(0,255,255,0.7);            
+}
+
+.card-tech:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0,255,255,0.7);
+}
