@@ -1,39 +1,16 @@
-'use client'
-
-import Image from 'next/image';
-import useCardEffect from '@/hooks/animation/useCardTechEffect';
 import React from 'react'
-import styles from '@/styles/tech-card.module.css';
-import { cn } from '@/lib/utils';
-
-// import javascript from '../../assets/techs/javascript.png';
-// import react from '../../assets/techs/react.png';
-// import tailwindcss from '../../assets/techs/tailwindcss.png';
-// import bootstrap from '../../assets/techs/bootstrap.png';
-// import typescript from '../../assets/techs/typescript.png';
-// import nodejs from '../../assets/techs/node_js.png';
-// import git from '../../assets/techs/git.png';
-// import mongodb from '../../assets/techs/mongo_db.png';
-// import redux from '../../assets/techs/redux.png';
-// import jest from '../../assets/techs/jest.png';
-// import saas from '../../assets/techs/saas.png';
-// import redis from '../../assets/techs/redis.png';
-// import github from '../../assets/techs/github.png';
 
 
 const Techs = () => {
-    const { glowRef, flowRef, rotateToMouse, removeListener } = useCardEffect();
-
-    const frontend = ["Javascript", "Typescript", "React", "Tailwindcss", "Saas", "Bootstrap"]
-    const backend = ["Nodejs", "Express", "Prisma", "Mongodb", "mySQL" ,"Postgress"]
-    const tools = ["Jest", "Cypress", "Vitest", "Git", "Github"]
+    const frontend = ["Javascript", "Typescript", "React", "Next", "Tailwindcss", "Styled Components","Saas", "Redux"]
+    const backend = ["Nodejs", "Express", "Fastify", "Prisma", "Mongodb", "mySQL" ,"Postgress"]
+    const tools = ["Jest", "Cypress", "Vitest", "Git", "Github", "Firebase"]
 
     return (
         <div>
-            <div className='flex items-center justify-center w-screen ' style={{ perspective: "1500px" }}>
+            <div className='flex items-center justify-center w-screen'>
                 <div
-                    ref={flowRef}
-                    className={cn("relative flex flex-col items-center flex-wrap justify-around h-full w-[1080px] rounded-tr-3xl to-black/50 border-[#ffc870]", styles["card"])}
+                    className="relative flex flex-col items-center flex-wrap justify-around h-full w-[1080px] rounded-tr-3xl to-black/50 border-[#ffc870]"
                     
                 >   
                     <h2 className='text-3xl text-white font-bold my-16'>Main Technologies</h2>
@@ -44,7 +21,7 @@ const Techs = () => {
                             {frontend.map((item, index) => (
                                 <div 
                                 key={index} 
-                                className='card-tech w-32 h-12 mt-4 flex items-center justify-center rounded-xl cursor-pointer text-xl font-bold text-white'>
+                                className='card-tech w-36 h-14 mt-4 flex items-center justify-center text-center rounded-xl cursor-pointer text-xl font-bold text-white'>
                                     {item}
                                 </div>
                             ))}
@@ -57,7 +34,7 @@ const Techs = () => {
                                 {backend.map((item, index) => (
                                     <div 
                                     key={index} 
-                                    className='card-tech w-32 h-12 mt-4 flex items-center justify-center rounded-xl cursor-pointer text-xl font-bold text-white'>
+                                    className='card-tech w-36 h-14 mt-4 flex items-center justify-center text-center rounded-xl cursor-pointer text-xl font-bold text-white'>
                                         {item}
                                     </div>
                                 ))}
@@ -69,7 +46,7 @@ const Techs = () => {
                                 {tools.map((item, index) => (
                                     <div 
                                     key={index} 
-                                    className='card-tech w-32 h-12 mt-4 flex items-center justify-center rounded-xl cursor-pointer text-xl font-bold text-white'>
+                                    className='card-tech w-36 h-14 mt-4 flex items-center justify-center text-center rounded-xl cursor-pointer text-xl font-bold text-white'>
                                         {item}
                                     </div>
                                 ))}
